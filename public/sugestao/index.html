@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sugestão</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <header>
+    <img src="img/banner.jpg" alt="Banner" id="banner">
+  </header>
+
+  <main>
+    <div class="title">
+      <a href="/" target="_self">Voltar</a>
+      <h1>Envie uma sugestão</h1>
+    </div>
+
+    <form>
+      <label for="nome">Nome completo:</label>
+      <input type="text" name="nome" id="nome" required>
+
+      <label for="email">E-Mail:</label>
+      <input type="text" name="email" id="email" required>
+
+      <label for="sugestao">Nome do pássaro (popular ou científico):</label>
+      <input type="text" name="sugestao" id="sugestao" required>
+
+      <label for="observacao">Observações:</label>
+      <textarea name="observacao" id="observacao"></textarea>
+
+      <button type="submit" class="submit-btn">Enviar</button>
+    </form>
+  </main>
+
+  <script src="js/submit.js"></script>
+</body>
+</html>

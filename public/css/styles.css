@@ -1,0 +1,198 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, sans-serif;
+
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    background-color: #CCC4BD;
+}
+
+/* estilos do menu lateral */
+
+#titulo{
+    position: absolute;
+    left: 70px;
+    top: 20px;
+    font-size: 1em;
+    transition: all 0.2s linear;
+    z-index: 2;
+}
+
+#check{
+    display: none;
+}
+
+#icone{
+    
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 100%;
+    background-color: rgba(31,36,33, 0.5);
+    transform: scale(0.8);
+    transition: all .2s linear;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+#check:hover ~ #icone{
+    transform: scale(1);
+
+}
+
+.barra{
+    
+    height: 100%;
+    width: 300px;
+    position: fixed;
+    transition: all 0.2s linear;
+    left: -300px;
+}
+
+.barra-visivel{
+    background-color: #1f2421;
+}
+
+nav{
+    width: 100%;
+    position: absolute;
+    top: 60px;
+}
+
+.botao-opcao{
+    display: block;
+    width: 100%;
+    border: none;
+    background-color: #4F5356;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s linear;
+    opacity: 0;
+}
+
+.botao-visivel{
+    opacity: 1;
+}
+
+.botao-opcao:hover, .botao-selecionado{
+    background-color: #CCC4BD;
+}
+
+button:focus{
+    outline: none;
+}
+
+.opcao{
+    padding: 20px;
+    font-size: 12pt;
+    color: white;
+    text-align: left;
+}
+
+.opcao.sugerir a {
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.opcao.sugerir a img {
+    margin-right: 10px;
+}
+
+#check:checked ~ .barra{
+    transform: translateX(300px);
+}
+
+#check:checked ~ #icone{
+    transform: scale(1);
+    border-radius: 0;
+    background-color: rgba(31,36,33);
+    padding-right: 252px;
+}
+
+#check:checked ~ #titulo{
+    color: white;
+}
+
+
+/* estilos do conteúdo */
+
+.container{
+    background-color: #DCE1DE;
+    width: 970px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+#imagem-passaro{
+    width: 100%;
+}
+
+#nome-passaro{
+    padding-top: 60px;
+    margin: 0 20px 10px 20px;
+    border-bottom: 1px solid grey;
+}
+
+#especificacao{
+    list-style: none;
+    margin: 40px;
+}
+
+#nome-cientifico{
+    font-style:italic;
+    margin-bottom: 5px;
+}
+
+.nome-paragrafo{
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+.info-p{
+    margin: 5px 20px 40px 20px;
+}
+
+
+@media screen and (max-width:540px){
+
+    .container{
+        width: 100vw;
+        margin: 0;
+        padding: 0 0 1em 0;
+    }
+
+    #titulo{
+        display: none;
+        font-size: 80%;
+    }
+
+    #check:checked ~ #titulo{
+        display: inline;
+    }
+
+    .barra{
+        width: 240px;
+    }
+
+    #check:checked ~ #icone{
+        padding-right: 192px;
+    }
+
+    h1{
+        text-align: center;
+    }
+
+    
+}
