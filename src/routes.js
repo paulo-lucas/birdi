@@ -30,11 +30,16 @@ routes.post('/birds/create', async (req, res) => {
         });
     }
 
+    console.log(req.body);
+
     const bird = new Bird(req.body);
 
     await bird.save()
         .then(createdBird => {
             return res.send(createdBird);
+        })
+        .catch(err => {
+            return res.status(400).send(err);
         });
 });
 
@@ -61,11 +66,16 @@ routes.post('/sugestions/create', async (req, res) => {
         });
     }
 
+    console.log(req.body);
+
     const sugestion = new Sugestion(req.body);
 
     await sugestion.save()
         .then(createdSugestion => {
             return res.send(createdSugestion);
+        })
+        .catch(err => {
+            return res.status(400).send(err);
         });
 });
 
