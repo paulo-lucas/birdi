@@ -10,7 +10,7 @@ form.onsubmit = async (e) => {
     "observacao": form.observacao.value
   }
 
-  fetch("https://birdibirdi.herokuapp.com/create", {
+  fetch("https://birdibirdi.herokuapp.com/sugestions/create", {
     "method": "POST",
     "headers": {
       "content-type": "application/json"
