@@ -9,7 +9,7 @@ routes.get('/birds', async (req, res) => {
     await Bird.find()
         .then(query => {
             query.forEach(bird => {
-                bird.src = `http://localhost:${process.env.PORT || 3333}/img/${bird.src}`;
+                bird.src = `https://birdibirdi.herokuapp.com/img/${bird.src}`;
             })
             return res.status(200).json(query);
         })
